@@ -1,0 +1,13 @@
+,
+  "video": false,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/report/mochawesome-report",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "screenshotsFolder": "mochawesome-report/assets"
+
+
+  sed -i '$i'"$(echo ',"video": false,"reporter": "mochawesome","reporterOptions": {"reportDir": "cypress/report/mochawesome-report","overwrite": false,"html": false,"json": true},"screenshotsFolder": "mochawesome-report/assets"')" cypress.json
