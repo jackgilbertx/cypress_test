@@ -1,0 +1,11 @@
+---
+pipeline:
+
+  cypress_test:
+    image: cypress/base:10
+    commands: 
+      - npm install cypress --save-dev
+      - npx cypress run
+    when:
+      event: [ push ]
+      branch: [ master ]
