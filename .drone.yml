@@ -5,7 +5,19 @@ pipeline:
     image: cypress/base:10
     commands: 
       - npm install cypress --save-dev
-      - npx cypress run
+      - npx cypress run --spec "cypress/integration/test_one.js"
+    when:
+      event: [ push ]
+      branch: [ master ]
+
+---
+pipeline:
+
+  cypress_test:
+    image: cypress/base:10
+    commands: 
+      - npm install cypress --save-dev
+      - npx cypress run --spec "cypress/integration/test_two.js"
     when:
       event: [ push ]
       branch: [ master ]
